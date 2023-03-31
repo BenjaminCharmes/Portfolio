@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+// Hooks
+import { useState } from 'react';
+
+// SCSS
 import './SwitchButton.scss';
 
-const SwitchButton = ({ mode, iconOn, iconOff, handleSwitchButton }) => {
-  const [isActive, setIsActive] = useState(false);
+const SwitchButton = ({ state, mode, iconOn, iconOff, handleSwitchButton }) => {
+
+  const [isActive, setIsActive] = useState(state);
 
   const handleSwitch = () => {
     setIsActive(!isActive);
