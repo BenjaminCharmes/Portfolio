@@ -26,8 +26,8 @@ const NavbarLinks = () => {
       ) : (
         <>
           <NavbarLink path='/' content='Accueil' />
-          <NavbarLink path='/' content='Projet' />
-          <NavbarLink path='/' content='À propos' />
+          <NavbarLink path='/projects' content='Projet' />
+          <NavbarLink path='/about' content='À propos' />
         </>
       )}
     </ul>

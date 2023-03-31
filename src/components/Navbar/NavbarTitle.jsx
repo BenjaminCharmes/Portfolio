@@ -10,6 +10,7 @@ const NavbarTitle = () => {
     <div className="navbar-title">
       <Link to="/">Benjamin Charmes</Link>
     </div>
+    
   )
 }
 

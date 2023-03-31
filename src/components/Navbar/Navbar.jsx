@@ -5,12 +5,10 @@ import { useEffect } from 'react';
 // Store
 import appStateStore from '../../store/appStateStore';
 
-// antd
-import { Switch, Space } from 'antd';
-
 // Components
 import NavbarLinks from "./NavbarLinks"
 import NavbarTitle from "./NavbarTitle"
+import SwitchButton from '../SwitchButton/SwitchButton';
 
 // SCSS
 import "./Navbar.scss"
@@ -45,22 +43,8 @@ const Navbar = () => {
       <NavbarTitle />
       <NavbarLinks />
       <div className='switch'>
-        <Space direction="vertical">
-          <Switch
-            checked={appState.theme === 'light'}
-            checkedChildren="☀️"
-            unCheckedChildren="🌛"
-            onChange={toggleTheme}
-          />
-        </Space>
-        <Space direction="vertical">
-          <Switch
-            checked={appState.language === 'english'}
-            checkedChildren="🇬🇧"
-            unCheckedChildren="🇫🇷"
-            onChange={toggleLanguage}
-          />
-        </Space>
+        <SwitchButton mode="theme" iconOn="☀️" iconOff="🌛" handleSwitchButton={toggleTheme}/>
+        <SwitchButton mode="language" iconOn="🇬🇧" iconOff="🇫🇷" handleSwitchButton={toggleLanguage}/>
       </div>
     </div>
   )
