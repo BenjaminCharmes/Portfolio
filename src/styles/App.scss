@@ -1,0 +1,33 @@
+@import "./abstracts/variables.scss";
+
+.app {
+
+  height: 100vh;
+  width: 100vw;
+  
+  &.light {
+    color: $light-text-color;
+    background-color: $light-background-color;
+
+    a {
+      color: $light-text-color;
+    }
+
+    .circle{
+      outline-color: $light-text-color;
+    }
+  }
+
+  &.dark {
+    color: $dark-text-color;
+    background-color: $dark-background-color;
+
+    a {
+      color: $dark-text-color;
+    }
+
+    .circle{
+      outline-color: $dark-text-color;
+    }
+  }
+}

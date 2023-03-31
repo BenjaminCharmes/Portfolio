@@ -1,0 +1,53 @@
+.icons {
+  display: flex;
+  gap: 1rem;
+
+  .circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    outline: 1px solid;
+    border-radius: 50%;
+    transition-property: outline-offset, outline-color, background-color;
+    transition-duration: 0.25s;
+  }
+
+  .circle:hover {
+    outline-offset: 0.3rem;
+    .icon {
+      animation: shake 0.25s;
+    }
+  }
+}
+
+.circle-linkedin:hover {
+  background-color: #0077b5;
+  outline-color: #0077b5;
+}
+
+.circle-github:hover {
+  background-color: #2ea44f;
+  outline-color: #2ea44f;
+}
+
+.circle-twitter:hover {
+  background-color: #1da1f2;
+  outline-color: #1da1f2;
+}
+
+@keyframes shake {
+	10% {
+		transform: rotate(15deg);
+	}
+	20% {
+		transform: rotate(-15deg);
+	}
+	30% {
+		transform: rotate(15deg);
+	}
+	40% {
+		transform: rotate(-15deg);
+	}
+}
