@@ -43,8 +43,8 @@ const Navbar = () => {
       <NavbarTitle />
       <NavbarLinks />
       <div className='switch'>
-        <SwitchButton mode="theme" iconOn="☀️" iconOff="🌛" handleSwitchButton={toggleTheme}/>
-        <SwitchButton mode="language" iconOn="🇬🇧" iconOff="🇫🇷" handleSwitchButton={toggleLanguage}/>
+        <SwitchButton state={appState.theme === 'light' ? true : false} mode="theme" iconOn="☀️" iconOff="🌛" handleSwitchButton={toggleTheme}/>
+        <SwitchButton state={appState.language === 'english' ? true : false} mode="language" iconOn="🇬🇧" iconOff="🇫🇷" handleSwitchButton={toggleLanguage}/>
       </div>
     </div>
   )
