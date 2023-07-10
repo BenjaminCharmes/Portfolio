@@ -1,0 +1,14 @@
+.custom-link {
+  display: flex;
+  padding: 0.3em;
+  margin: 0.3em;
+  border: 1px solid blue;
+  border-radius: 3em;
+  width: 6em;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-link:hover {
+  border: 1px solid crimson;
+}

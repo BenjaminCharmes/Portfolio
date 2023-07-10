@@ -1,10 +1,5 @@
 const Projects = () => {
-
-  return (
-    <>
-      Projects
-    </>
-  )
-}
+  return <>COMING SOON</>;
+};
 
 export default Projects;

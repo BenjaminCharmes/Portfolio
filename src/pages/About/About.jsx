@@ -1,10 +1,15 @@
-const About = () => {
+// SCSS
+import "./About.scss";
 
+// Components
+import CardAbout from "../../components/About_Components/Card/Card";
+
+const About = () => {
   return (
-    <>
-      About
-    </>
-  )
-}
+    <div className='about-container'>
+      <CardAbout />
+    </div>
+  );
+};
 
 export default About;

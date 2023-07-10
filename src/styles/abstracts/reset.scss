@@ -40,11 +40,11 @@ select {
 }
 
 h1 {
-    font-family: "Ibarra Real Nova", serif;
-    font-weight: bold;
-    font-size: 3rem;
-    color: rgb(253, 232, 179, 0.7);
-    overflow-wrap: break-word;
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: bold;
+  font-size: 3rem;
+  color: rgb(253, 232, 179, 0.7);
+  overflow-wrap: break-word;
 }
 
 h3 {
@@ -61,7 +61,7 @@ p {
   overflow-wrap: break-word;
 }
 
-input[type='submit']:hover,
+input[type="submit"]:hover,
 button:hover {
   cursor: pointer;
 }
@@ -71,7 +71,7 @@ input::-ms-clear {
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,

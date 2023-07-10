@@ -1,44 +1,44 @@
 // React
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-
-// Hooks
-import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Jotai
-import { Provider, useAtomValue } from 'jotai';
-import appStateStore from './store/appStateStore';
+import { Provider, useAtomValue } from "jotai";
+import appStateStore from "./store/appStateStore";
 
 // Pages
-import Home from './pages/Home/Home'
-import Projects from './pages/Projects/Projects';
-import About from './pages/About/About';
+import About from "./pages/About/About";
+import CV from "./pages/CV/CV";
+import Projects from "./pages/Projects/Projects";
+import Contact from "./pages/Contact/Contact";
 
 // Components
-import Navbar from "./components/Navbar/Navbar"
-import Footer from './components/Footer/Footer';
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 // SCSS
-import "./styles/App.scss"
+import "./styles/App.scss";
 
 function App() {
-
   const appState = useAtomValue(appStateStore);
 
   return (
     <Provider stores={[appStateStore]}>
-      <div className="app">
+      <div className='app'>
         <Router>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/projects" element={<Projects />}></Route>
-            <Route path="/about" element={<About />}></Route>
-          </Routes>
-          <Footer />
+          <div className='page'>
+            <Navbar />
+            <Routes>
+              <Route path='/' element={<About />}></Route>
+              <Route path='/projects' element={<Projects />}></Route>
+              <Route path='/cv' element={<CV />}></Route>
+              <Route path='/contact' element={<Contact />}></Route>
+            </Routes>
+            <Footer />
+          </div>
         </Router>
       </div>
     </Provider>
-  )
+  );
 }
 
 export default App;

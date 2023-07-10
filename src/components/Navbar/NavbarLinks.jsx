@@ -8,26 +8,26 @@ import appStateAtom from "../../store/appStateStore";
 import NavbarLink from "./NavbarLink";
 
 // SCSS
-import "./NavbarLinks.scss"
-
+import "./NavbarLinks.scss";
 
 const NavbarLinks = () => {
-
   const appState = useAtomValue(appStateAtom);
-  
+
   return (
     <ul>
-      { appState.language === 'english' ? (
+      {appState.language === "english" ? (
         <>
-          <NavbarLink path='/' content='Home' />
-          <NavbarLink path='/projects' content='Project' />
-          <NavbarLink path='/about' content='About' />
+          <NavbarLink path='/' content='About me' />
+          <NavbarLink path='/cv' content='CV' />
+          <NavbarLink path='/projects' content='Projects' />
+          <NavbarLink path='/contact' content='Contact' />
         </>
       ) : (
         <>
-          <NavbarLink path='/' content='Accueil' />
-          <NavbarLink path='/projects' content='Projet' />
-          <NavbarLink path='/about' content='À propos' />
+          <NavbarLink path='/' content='À propos de moi' />
+          <NavbarLink path='/cv' content='CV' />
+          <NavbarLink path='/projects' content='Projets' />
+          <NavbarLink path='/contact' content='Contact' />
         </>
       )}
     </ul>

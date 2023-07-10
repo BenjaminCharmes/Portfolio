@@ -1,10 +1,16 @@
 @import "./abstracts/variables.scss";
 
 .app {
-
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  .page {
+    height: 100%;
+  }
+
   &.light {
     color: $light-text-color;
     background-color: $light-background-color;
@@ -13,7 +19,7 @@
       color: $light-text-color;
     }
 
-    .circle{
+    .circle {
       outline-color: $light-text-color;
     }
   }
@@ -26,7 +32,7 @@
       color: $dark-text-color;
     }
 
-    .circle{
+    .circle {
       outline-color: $dark-text-color;
     }
   }
