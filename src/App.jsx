@@ -26,14 +26,16 @@ function App() {
       <div className='app'>
         <Router>
           <div className='page'>
-            <Navbar />
-            <Routes>
-              <Route path='/' element={<About />}></Route>
-              <Route path='/projects' element={<Projects />}></Route>
-              <Route path='/cv' element={<CV />}></Route>
-              <Route path='/contact' element={<Contact />}></Route>
-            </Routes>
-            <Footer />
+            <div class='page-content overflow-visible'>
+              <Navbar />
+              <Routes>
+                <Route path='/' element={<About />}></Route>
+                <Route path='/projects' element={<Projects />}></Route>
+                <Route path='/cv' element={<CV />}></Route>
+                <Route path='/contact' element={<Contact />}></Route>
+              </Routes>
+              <Footer />
+            </div>
           </div>
         </Router>
       </div>

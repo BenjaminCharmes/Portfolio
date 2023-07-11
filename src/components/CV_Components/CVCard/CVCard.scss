@@ -1,0 +1,56 @@
+@import "src/styles/abstracts/variables.scss";
+
+.cv-card-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: auto;
+  box-shadow: $box-shadow;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  padding: 2em;
+
+  .left {
+    .date {
+      font-weight: 700;
+    }
+
+    .title {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      font-weight: 700;
+      font-size: 1.2em;
+    }
+
+    .company {
+      margin-bottom: 0.5em;
+    }
+
+    .location {
+    }
+  }
+
+  .right {
+    padding-left: 0.5em;
+    white-space: pre-line;
+
+    .descritpion {
+    }
+
+    .link {
+      margin-top: 1em;
+      padding: 0.7em;
+      display: inline-block;
+      border: 1px solid lig;
+      background-color: lightblue;
+      border-radius: 1em;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      height: auto;
+      padding: 0.5em;
+    }
+  }
+}

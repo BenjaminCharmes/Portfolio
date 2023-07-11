@@ -3,6 +3,11 @@
   padding: 0.5rem;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
 
   .switch {
     display: flex;

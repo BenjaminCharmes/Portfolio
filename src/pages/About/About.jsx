@@ -2,12 +2,12 @@
 import "./About.scss";
 
 // Components
-import CardAbout from "../../components/About_Components/Card/Card";
+import AboutCard from "../../components/About_Components/AboutCard/AboutCard";
 
 const About = () => {
   return (
     <div className='about-container'>
-      <CardAbout />
+      <AboutCard />
     </div>
   );
 };

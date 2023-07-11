@@ -1,0 +1,12 @@
+@import "src/styles/abstracts/variables.scss";
+
+.cv-skills-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+  margin-bottom: 1em;
+  padding: 2em;
+  border-radius: 0.5em;
+  box-shadow: $box-shadow;
+}

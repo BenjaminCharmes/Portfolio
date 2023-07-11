@@ -6,9 +6,9 @@ import CustomLink from "../../Link/CustomLink";
 import ProfilPhoto from "/src/assets/Images/Benjamin_CHARMES_Photo.jpg";
 
 // SCSS
-import "./Card.scss";
+import "./AboutCard.scss";
 
-const Card = () => {
+const AboutCard = () => {
   return (
     <div className='about-card'>
       <div className='left-col'>
@@ -39,4 +39,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default AboutCard;

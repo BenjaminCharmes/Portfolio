@@ -9,6 +9,12 @@
 
   .page {
     height: 100%;
+    margin-top: 4.1em;
+    overflow: hidden;
+  }
+
+  .page-content.overflow-visible {
+    overflow: auto;
   }
 
   &.light {
