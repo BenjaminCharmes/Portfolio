@@ -26,7 +26,7 @@ function App() {
       <div className='app'>
         <Router>
           <div className='page'>
-            <div class='page-content overflow-visible'>
+            <div className='page-content overflow-visible'>
               <Navbar />
               <Routes>
                 <Route path='/' element={<About />}></Route>

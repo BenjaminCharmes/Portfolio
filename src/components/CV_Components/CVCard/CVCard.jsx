@@ -41,8 +41,8 @@ const CVCard = (props) => {
         ) : null}
         {props.skills ? (
           <div className='skills'>
-            {props.skillsList.map((skill) => (
-              <Skill name={skill} alt={skill} />
+            {props.skillsList.map((skill, index) => (
+              <Skill name={skill} alt={skill} key={index} />
             ))}
           </div>
         ) : null}

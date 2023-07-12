@@ -2,13 +2,14 @@
   display: flex;
   padding: 0.3em;
   margin: 0.3em;
-  border: 1px solid blue;
+  border: 2px solid darkkhaki;
   border-radius: 3em;
   width: 6em;
   align-items: center;
   justify-content: center;
+  background-color: beige;
 }
 
 .custom-link:hover {
-  border: 1px solid crimson;
+  border: 2px solid darkolivegreen;
 }

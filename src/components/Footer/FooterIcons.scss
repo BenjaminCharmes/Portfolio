@@ -8,7 +8,9 @@
     align-items: center;
     width: 1.5rem;
     height: 1.5rem;
-    outline: 1px solid;
+    border: 1px solid #606c38;
+    padding: 0.1em;
+    border-radius: 2pt;
     border-radius: 50%;
     transition-property: outline-offset, outline-color, background-color;
     transition-duration: 0.25s;
