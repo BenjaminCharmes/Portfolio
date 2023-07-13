@@ -4,12 +4,11 @@
   display: flex;
   align-self: center;
   height: 35em;
-  width: 90%;
+  width: 50%;
   margin-top: 7em;
   margin-bottom: 15em;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  box-shadow: $box-shadow;
 
   .left-col {
     display: grid;
@@ -20,8 +19,8 @@
       height: 0.1em;
       width: 3em;
       margin: 1em;
-      background-color: darkolivegreen;
-      border: 1px solid darkolivegreen;
+      background-color: $light-background;
+      border: 1px solid $light-background;
       border-radius: 1em;
     }
 
@@ -30,7 +29,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
-      background-color: beige;
+      background-color: $light-background-color;
       padding-top: 3em;
       padding-bottom: 3em;
 
@@ -42,11 +41,21 @@
       .name {
         font-size: 2em;
         font-weight: 700;
+        white-space: wrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-align: center;
       }
 
       .title {
         text-transform: uppercase;
         font-size: 1.2em;
+        letter-spacing: 0.1em;
+
+        white-space: wrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-align: center;
       }
     }
 
@@ -54,6 +63,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      background-color: $light-background;
     }
   }
 
@@ -64,7 +74,7 @@
     justify-content: space-around;
     align-items: flex-start;
     text-align: left;
-    box-shadow: $box-shadow;
+    background-color: $light-background;
 
     .title {
       font-size: 5em;

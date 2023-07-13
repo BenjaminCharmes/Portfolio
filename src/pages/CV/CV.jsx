@@ -33,7 +33,7 @@ const CV = () => {
           location='France'
           description='Participation in the mobile optimisation of the Loxpert platform and the development of its mobile application.'
           link='https://www.loxpert.fr'
-          linkText='Visit Loxpert ➡️'
+          linkText='Visit Loxpert'
           skills={true}
           skillsList={[
             NODE_JS,

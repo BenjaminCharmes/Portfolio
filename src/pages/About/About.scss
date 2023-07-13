@@ -1,5 +1,12 @@
+@import "src/styles/abstracts/variables.scss";
+
 .about-container {
   display: flex;
   height: 100%;
   justify-content: center;
+  background: linear-gradient(
+    0.25turn,
+    $light-background-color 0 33%,
+    $light-background 33% 100%
+  );
 }
