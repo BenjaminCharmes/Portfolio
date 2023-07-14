@@ -2,6 +2,7 @@
 import CVTitle from "../../components/CV_Components/CVTitle/CVTitle";
 import CVCard from "../../components/CV_Components/CVCard/CVCard";
 import SkillsCard from "../../components/CV_Components/SkillsCard/SkillsCard";
+import H1Title from "../../components/H1Title/H1Title";
 
 //SVG
 import FIGMA from "../../assets/Skills_SVG/FIGMA.svg";
@@ -18,8 +19,17 @@ import VUE_JS from "../../assets/Skills_SVG/VUE_JS.svg";
 import "./CV.scss";
 
 const CV = () => {
+  const handleDownload = () => {
+    const downloadUrl = "src/assets/pdf/CV_Benjamin_CHARMES_english.pdf";
+    window.open(downloadUrl);
+  };
+
   return (
     <div className='cv-container'>
+      <div className='title-container'>
+        <H1Title title={"CV"} />
+        <button onClick={handleDownload}>Download</button>
+      </div>
       <div className='skills'>
         <CVTitle text='My Skills' />
         <SkillsCard />

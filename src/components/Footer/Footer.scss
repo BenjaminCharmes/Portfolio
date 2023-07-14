@@ -4,12 +4,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  color: #333;
-  padding: 1em;
+  // position: fixed;
+  // bottom: 0;
+  // left: 0;
   height: 3rem;
+  padding: 1em;
   width: 100%;
   box-sizing: border-box;
   background-color: $light-background;

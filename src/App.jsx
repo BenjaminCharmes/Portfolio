@@ -25,18 +25,18 @@ function App() {
     <Provider stores={[appStateStore]}>
       <div className='app'>
         <Router>
+          <Navbar />
+
           <div className='page'>
-            <div className='page-content overflow-visible'>
-              <Navbar />
-              <Routes>
-                <Route path='/' element={<About />}></Route>
-                <Route path='/projects' element={<Projects />}></Route>
-                <Route path='/cv' element={<CV />}></Route>
-                <Route path='/contact' element={<Contact />}></Route>
-              </Routes>
-              <Footer />
-            </div>
+            <Routes>
+              <Route path='/' element={<About />}></Route>
+              <Route path='/projects' element={<Projects />}></Route>
+              <Route path='/cv' element={<CV />}></Route>
+              <Route path='/contact' element={<Contact />}></Route>
+            </Routes>
           </div>
+
+          <Footer />
         </Router>
       </div>
     </Provider>

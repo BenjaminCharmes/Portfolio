@@ -1,8 +1,24 @@
+@import "src/styles/abstracts/variables.scss";
+
 .cv-container {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  padding: 2em;
+  flex-grow: 1;
+  padding: 1.5em;
+
+  .title-container {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      background-color: $light-background-color-secondary;
+      border: 2px solid $light-background-color-secondary;
+      border-radius: 0.5em;
+      padding: 0.5em;
+    }
+
+    button:hover {
+      border: 2px solid $light-background;
+    }
+  }
 
   .skills,
   .experiences,
