@@ -21,14 +21,14 @@ const Contact = () => {
   };
 
   return (
-    <>
-      <div>NOT WORKING - COMING SOON</div>
+    <div className='form-container'>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor='email'>Email :</label>
           <input
             type='email'
             id='email'
+            placeholder='Enter your email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -39,6 +39,7 @@ const Contact = () => {
           <input
             type='text'
             id='subject'
+            placeholder='Enter your object'
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
             required
@@ -49,13 +50,14 @@ const Contact = () => {
           <textarea
             id='message'
             value={message}
+            placeholder='Enter your message'
             onChange={(e) => setMessage(e.target.value)}
             required
           />
         </div>
         <button type='submit'>Envoyer</button>
       </form>
-    </>
+    </div>
   );
 };
 

@@ -1,16 +1,50 @@
 @import "src/styles/abstracts/variables.scss";
 
-form {
+.form-container {
+  height: 85.9vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-self: center;
 
-  label {
+  form {
     display: flex;
-    font-weight: 700;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30em;
+    height: 30em;
+    background-color: $light-background;
+    border-radius: 0.5em;
+    box-shadow: $box-shadow;
+
+    label {
+      display: flex;
+      font-weight: 700;
+      margin-bottom: 1em;
+      margin-top: 1em;
+    }
+
+    input,
+    textarea {
+      width: 20em;
+      padding: 0.5em;
+      border: 1px solid rgba(230, 230, 230, 0.844);
+      background-color: rgba(230, 230, 230, 0.844);
+      border-radius: 0.3em;
+    }
+
+    textarea {
+      height: 6em;
+      margin-bottom: 2em;
+    }
+
+    button {
+      margin-bottom: 1.5em;
+      background: $light-background-card-color;
+      border-radius: 0.3em;
+      padding: 0.7em;
+      border: none;
+      color: $light-text-color;
+    }
   }
 }

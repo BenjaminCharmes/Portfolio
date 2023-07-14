@@ -1,6 +1,7 @@
 //Colors
 $light-text-color: #606c38;
-$light-background-color: #afbc88;
+$light-background-color: beige;
+$light-background-card-color: #afbc88;
 $light-background: #fff;
 
 $dark-text-color: #afbc88;
@@ -8,3 +9,10 @@ $dark-background-color: #333;
 
 //Shadow
 $box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+// Font
+
+@font-face {
+  font-family: OpenSans-Semibold;
+  src: url(/assets/fonts/OpenSans-VariableFont_wdth,wght);
+}

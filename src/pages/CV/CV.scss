@@ -2,6 +2,13 @@
   display: flex;
   height: 100%;
   flex-direction: column;
-  justify-content: flex-start;
   padding: 2em;
+
+  .skills,
+  .experiences,
+  .formation {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }
