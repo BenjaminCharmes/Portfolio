@@ -3,7 +3,7 @@ import CVTitle from "../../components/CV_Components/CVTitle/CVTitle";
 import CVCard from "../../components/CV_Components/CVCard/CVCard";
 import SkillsCard from "../../components/CV_Components/SkillsCard/SkillsCard";
 import H1Title from "../../components/H1Title/H1Title";
-import Button from "../../components/Button/Button";
+import ButtonDark from "../../components/Button/ButtonDark/ButtonDark";
 
 //SVG
 import FIGMA from "../../assets/Skills_SVG/FIGMA.svg";
@@ -30,7 +30,7 @@ const CV = () => {
       <div className='content-container'>
         <div className='title-container'>
           <H1Title title={"CV"} />
-          <Button onClick={handleDownload} text={"Download"} />
+          <ButtonDark onClick={handleDownload} text={"Download"} />
         </div>
         <div className='skills'>
           <CVTitle text='My Skills' />

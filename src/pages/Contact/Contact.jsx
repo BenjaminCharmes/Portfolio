@@ -1,6 +1,9 @@
 // React
 import React, { useState } from "react";
 
+// Components
+import ButtonLight from "../../components/Button/ButtonLight/ButtonLight";
+
 // SCSS
 import "./Contact.scss";
 
@@ -55,7 +58,7 @@ const Contact = () => {
             required
           />
         </div>
-        <button type='submit'>Envoyer</button>
+        <ButtonLight text={"Envoyer"} />
       </form>
     </div>
   );
