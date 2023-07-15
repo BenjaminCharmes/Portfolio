@@ -1,6 +1,7 @@
 @import "src/styles/abstracts/variables.scss";
 
 .cv-card-container {
+  width: calc(100% - 3em);
   display: grid;
   grid-template-columns: 1fr 3fr;
   height: auto;
@@ -9,7 +10,6 @@
   margin-bottom: 1em;
   padding: 1.5em;
   background-color: #fff;
-  width: 75%;
 
   .left {
     .date {
@@ -29,6 +29,10 @@
 
     .location {
     }
+
+    .link {
+      margin-top: 1em;
+    }
   }
 
   .right {
@@ -38,25 +42,13 @@
     .descritpion {
     }
 
-    .link {
-      margin-top: 1em;
-      padding: 0.5em;
-      display: inline-block;
-      background-color: $light-background-color-secondary;
-      border: 2px solid transparent;
-      border-radius: 1em;
-    }
-
-    .link:hover {
-      border: 2px solid $light-text-color;
-    }
-
     .skills {
       display: flex;
-      flex-direction: row;
+      flex-direction: row !important;
       flex-wrap: wrap;
       justify-content: center;
       height: auto;
+      margin-top: 1em;
       padding: 0.5em;
     }
   }

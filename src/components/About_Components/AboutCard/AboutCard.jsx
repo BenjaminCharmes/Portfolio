@@ -26,8 +26,8 @@ const AboutCard = () => {
         <div className='title'>Hello !</div>
         <div className='sub-title'>I'm a FullStack focused Web Developer</div>
         <div className='links'>
-          <CustomLink link='cv' text='CV' />
-          <CustomLink link='projects' text='PROJECTS' />
+          <CustomLink link='/cv' text='CV' newWindow={false} />
+          <CustomLink link='/projects' text='PROJECTS' newWindow={false} />
         </div>
         <div className='description'>
           I'm open to Job opportunities where I can contribute, learn and grow.

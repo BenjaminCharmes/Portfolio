@@ -1,10 +1,12 @@
 // React router dom
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-const NavbarLink = ({ path, content }) => {
+const NavbarLink = ({ path, content, activeLink }) => {
   return (
     <li>
-      <Link to={path}>{content}</Link>
+      <Link to={path} className={activeLink === path ? "active" : "inactive"}>
+        {content}
+      </Link>
     </li>
   );
 };

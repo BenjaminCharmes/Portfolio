@@ -2,29 +2,25 @@
 
 .cv-container {
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
   padding: 1.5em;
 
-  .title-container {
-    display: flex;
-    justify-content: space-between;
-
-    button {
-      background-color: $light-background-color-secondary;
-      border: 2px solid $light-background-color-secondary;
-      border-radius: 0.5em;
-      padding: 0.5em;
-    }
-
-    button:hover {
-      border: 2px solid $light-background;
-    }
-  }
-
-  .skills,
-  .experiences,
-  .formation {
-    display: flex;
+  .content-container {
     align-items: center;
-    flex-direction: column;
+    width: 90%;
+
+    .title-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .skills,
+    .experiences,
+    .formation {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
   }
 }

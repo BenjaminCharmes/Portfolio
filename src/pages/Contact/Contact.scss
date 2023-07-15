@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     width: 30em;
-    height: 30em;
+    height: 31em;
     background-color: $light-background;
     border-radius: 0.5em;
     box-shadow: $box-shadow;
@@ -34,12 +34,13 @@
     }
 
     textarea {
-      height: 6em;
-      margin-bottom: 2em;
+      height: 10em;
+      margin-bottom: 1em;
+      resize: none;
     }
 
     button {
-      margin-bottom: 1.5em;
+      margin-bottom: 1em;
       background: $light-background-color-primary;
       border-radius: 0.3em;
       padding: 0.7em;

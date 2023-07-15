@@ -1,15 +1,15 @@
+@import "src/styles/abstracts/variables.scss";
+
 .custom-link {
   display: flex;
   padding: 0.5em;
-  margin: 0.3em;
   border: 2px solid transparent;
   border-radius: 3em;
   width: 6em;
-  align-items: center;
   justify-content: center;
-  background-color: beige;
+  background-color: $light-background-color-primary;
 }
 
 .custom-link:hover {
-  border: 2px solid darkolivegreen;
+  border: 2px solid $light-text-color;
 }

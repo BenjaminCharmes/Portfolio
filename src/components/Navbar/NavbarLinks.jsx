@@ -1,3 +1,7 @@
+// React
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 // Jotai
 import { useAtomValue } from "jotai";
 
@@ -12,22 +16,48 @@ import "./NavbarLinks.scss";
 
 const NavbarLinks = () => {
   const appState = useAtomValue(appStateAtom);
+  const location = useLocation();
+  const [currentUrl, setCurrentUrl] = useState("");
+
+  useEffect(() => {
+    setCurrentUrl(location.pathname);
+  }, [location]);
 
   return (
     <ul>
       {appState.language === "english" ? (
         <>
-          <NavbarLink path='/' content='About me' />
-          <NavbarLink path='/cv' content='CV' />
-          <NavbarLink path='/projects' content='Projects' />
-          <NavbarLink path='/contact' content='Contact' />
+          <NavbarLink path='/' content='About me' activeLink={currentUrl} />
+          <NavbarLink path='/cv' content='CV' activeLink={currentUrl} />
+          <NavbarLink
+            path='/projects'
+            content='Projects'
+            activeLink={currentUrl}
+          />
+          <NavbarLink
+            path='/contact'
+            content='Contact'
+            activeLink={currentUrl}
+          />
         </>
       ) : (
         <>
-          <NavbarLink path='/' content='À propos de moi' />
-          <NavbarLink path='/cv' content='CV' />
-          <NavbarLink path='/projects' content='Projets' />
-          <NavbarLink path='/contact' content='Contact' />
+          <NavbarLink
+            path='/'
+            content='À propos de moi'
+            activeLink={currentUrl}
+          />
+          <NavbarLink path='/cv' content='CV' activeLink={currentUrl} />
+          <NavbarLink
+            path='/projects'
+            content='Projets'
+            activeLink={currentUrl}
+          />
+          <NavbarLink
+            path='/contact'
+            content='Contact'
+            activeLink={currentUrl}
+          />
         </>
       )}
     </ul>
