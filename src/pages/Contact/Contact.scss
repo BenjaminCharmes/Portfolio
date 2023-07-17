@@ -15,8 +15,12 @@
     height: 31em;
     background-color: $light-background;
     border-radius: 0.5em;
-    box-shadow: $box-shadow;
-
+    &.light {
+      box-shadow: $box-shadow-light;
+    }
+    &.dark {
+      box-shadow: $box-shadow-dark;
+    }
     label {
       display: flex;
       font-weight: 700;

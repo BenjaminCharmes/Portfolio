@@ -1,3 +1,7 @@
+// Jotai
+import { useAtomValue } from "jotai";
+import appStateStore from "../../../store/appStateStore";
+
 // Components
 import Skill from "../Skill/Skill";
 
@@ -19,8 +23,10 @@ import GITHUB from "../../../assets/Skills_SVG/GITHUB.svg";
 import "./SkillsCard.scss";
 
 const SkillsCard = (props) => {
+  const appState = useAtomValue(appStateStore);
+
   return (
-    <div className='cv-skills-card-container '>
+    <div className={`cv-skills-card-container ${appState.theme}`}>
       <Skill name={HTML5} alt={"HTML5"} />
       <Skill name={CSS3} alt={"CSS3"} />
       <Skill name={JS} alt={"Javascript"} />

@@ -7,9 +7,19 @@
   border-radius: 3em;
   width: 6em;
   justify-content: center;
-  background-color: $light-background-color-primary;
+  &.light {
+    background-color: $light-background-color-primary;
+  }
+  &.dark {
+    background-color: $dark-background-color-primary;
+  }
 }
 
 .custom-link:hover {
-  border: 2px solid $light-text-color;
+  &.light {
+    border: 2px solid $light-text-color;
+  }
+  &.dark {
+    border: 2px solid $dark-text-color;
+  }
 }

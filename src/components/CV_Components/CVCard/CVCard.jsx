@@ -1,6 +1,10 @@
 // React-router-dom
 import { Link } from "react-router-dom";
 
+// Jotai
+import { useAtomValue } from "jotai";
+import appStateStore from "../../../store/appStateStore";
+
 // Components
 import Skill from "../Skill/Skill";
 import CustomLink from "../../Link/CustomLink";
@@ -9,8 +13,10 @@ import CustomLink from "../../Link/CustomLink";
 import "./CVCard.scss";
 
 const CVCard = (props) => {
+  const appState = useAtomValue(appStateStore);
+
   return (
-    <div className='cv-card-container '>
+    <div className={`cv-card-container ${appState.theme}`}>
       <div className='left'>
         <div className='date'>{props.date}</div>
         <div className='title'>{props.title}</div>
@@ -32,7 +38,13 @@ const CVCard = (props) => {
         {props.skills ? (
           <div className='skills'>
             {props.skillsList.map((skill, index) => (
-              <Skill name={skill} alt={skill} key={index} />
+              <Skill
+                name={skill}
+                alt={skill
+                  .replace("/src/assets/Skills_SVG/", "")
+                  .replace(".svg", "")}
+                key={index}
+              />
             ))}
           </div>
         ) : null}

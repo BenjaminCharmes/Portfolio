@@ -8,6 +8,12 @@
   margin-bottom: 1em;
   padding: 1.5em;
   border-radius: 0.5em;
-  box-shadow: $box-shadow;
-  background-color: $light-background;
+  &.light {
+    box-shadow: $box-shadow-light;
+    background-color: $light-background;
+  }
+  &.dark {
+    box-shadow: $box-shadow-dark;
+    background-color: $dark-background;
+  }
 }

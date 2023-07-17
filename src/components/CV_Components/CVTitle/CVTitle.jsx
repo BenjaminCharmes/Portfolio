@@ -1,6 +1,3 @@
-// React router
-import { Link } from "react-router-dom";
-
 // SCSS
 import "./CVTitle.scss";
 

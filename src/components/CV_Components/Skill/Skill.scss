@@ -2,5 +2,10 @@
 
 .skill-icon {
   margin: 0.5em;
-  box-shadow: $box-shadow;
+  &.light {
+    box-shadow: $box-shadow-light;
+  }
+  &.dark {
+    box-shadow: $box-shadow-dark;
+  }
 }

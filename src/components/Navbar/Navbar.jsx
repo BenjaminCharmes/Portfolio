@@ -2,7 +2,7 @@
 import { useAtom } from "jotai";
 import { useEffect } from "react";
 
-// Store
+// Jotai
 import appStateStore from "../../store/appStateStore";
 
 // Components
@@ -38,25 +38,25 @@ const Navbar = () => {
   }, [appState]);
 
   return (
-    <div className='navbar'>
+    <div className={`navbar ${appState.theme}`}>
       <NavbarTitle />
       <NavbarLinks />
-      {/* <div className='switch'>
+      <div className='switch'>
         <SwitchButton
           state={appState.theme === "light" ? true : false}
           mode='theme'
-          iconOn='☀️'
-          iconOff='🌛'
+          srcOn='src/assets/Images/sun.png'
+          srcOff='src/assets/Images/moon.png'
           handleSwitchButton={toggleTheme}
         />
         <SwitchButton
           state={appState.language === "english" ? true : false}
           mode='language'
-          iconOn='🇬🇧'
-          iconOff='🇫🇷'
+          textOn='En'
+          textOff='Fr'
           handleSwitchButton={toggleLanguage}
         />
-      </div> */}
+      </div>
     </div>
   );
 };

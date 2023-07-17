@@ -12,14 +12,25 @@
   .left-col {
     display: grid;
     grid-template-rows: 10fr 1fr;
-    box-shadow: $box-shadow;
+    &.light {
+      box-shadow: $box-shadow-light;
+    }
+    &.dark {
+      box-shadow: $box-shadow-dark;
+    }
 
     hr {
       height: 0.1em;
       width: 3em;
       margin: 1em;
-      background-color: $light-background;
-      border: 1px solid $light-background;
+      &.light {
+        background-color: $light-background;
+        border: 1px solid $light-background;
+      }
+      &.dark {
+        background-color: $dark-background;
+        border: 1px solid $dark-background;
+      }
       border-radius: 1em;
     }
 
@@ -28,7 +39,12 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
-      background-color: $light-background-color-secondary;
+      &.light {
+        background-color: $light-background-color-secondary;
+      }
+      &.dark {
+        background-color: $dark-background-color-secondary;
+      }
       padding-top: 3em;
       padding-bottom: 3em;
 
@@ -62,7 +78,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: $light-background;
+      &.light {
+        background-color: $light-background;
+      }
+      &.dark {
+        background-color: $dark-background;
+      }
     }
   }
 
@@ -73,7 +94,12 @@
     justify-content: space-around;
     align-items: flex-start;
     text-align: left;
-    background-color: $light-background;
+    &.light {
+      background-color: $light-background;
+    }
+    &.dark {
+      background-color: $dark-background;
+    }
 
     .title {
       font-size: 4em;

@@ -4,9 +4,19 @@
   flex-grow: 1;
   display: flex;
   justify-content: center;
-  background: linear-gradient(
-    0.25turn,
-    $light-background-color-primary 0 45%,
-    $light-background 45% 100%
-  );
+
+  &.light {
+    background: linear-gradient(
+      0.25turn,
+      $light-background-color-primary 0 45%,
+      $light-background 45% 100%
+    );
+  }
+  &.dark {
+    background: linear-gradient(
+      0.25turn,
+      $dark-background-color-primary 0 45%,
+      $dark-background 45% 100%
+    );
+  }
 }

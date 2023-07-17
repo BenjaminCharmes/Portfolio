@@ -8,8 +8,12 @@
   left: 0;
   right: 0;
   padding: 0.5rem;
-  background-color: $light-background;
-
+  &.light {
+    background-color: $light-background;
+  }
+  &.dark {
+    background-color: $dark-background;
+  }
   .switch {
     display: flex;
     flex-direction: column;

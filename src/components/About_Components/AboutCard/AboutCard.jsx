@@ -2,6 +2,10 @@
 import FooterIcons from "../../Footer/FooterIcons";
 import CustomLink from "../../Link/CustomLink";
 
+// Jotai
+import { useAtomValue } from "jotai";
+import appStateStore from "../../../store/appStateStore";
+
 // Assets
 import ProfilPhoto from "/src/assets/Images/Benjamin_CHARMES_Photo.jpg";
 
@@ -9,20 +13,26 @@ import ProfilPhoto from "/src/assets/Images/Benjamin_CHARMES_Photo.jpg";
 import "./AboutCard.scss";
 
 const AboutCard = () => {
+  const appState = useAtomValue(appStateStore);
+
   return (
-    <div className='about-card'>
-      <div className='left-col'>
-        <div className='top'>
-          <img className='profil-photo' src={ProfilPhoto} />
+    <div className={`about-card ${appState.theme}`}>
+      <div className={`left-col ${appState.theme}`}>
+        <div className={`top ${appState.theme}`}>
+          <img
+            className='profil-photo'
+            src={ProfilPhoto}
+            alt='Profile photo of Benjamin CHARMES'
+          />
           <div className='name'> Benjamin CHARMES</div>
-          <hr />
+          <hr className={appState.theme} />
           <div className='title'>FullStack Web Developer</div>
         </div>
-        <div className='bot'>
+        <div className={`bot ${appState.theme}`}>
           <FooterIcons />
         </div>
       </div>
-      <div className='right-col'>
+      <div className={`right-col ${appState.theme}`}>
         <div className='title'>Hello !</div>
         <div className='sub-title'>I'm a FullStack focused Web Developer</div>
         <div className='links'>

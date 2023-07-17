@@ -3,5 +3,10 @@
 .h1-title {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  color: $light-text-color;
+  &.light {
+    color: $light-text-color;
+  }
+  &.dark {
+    color: $dark-text-color;
+  }
 }

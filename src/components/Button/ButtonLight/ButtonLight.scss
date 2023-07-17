@@ -3,12 +3,24 @@
 .button-light {
   width: 7em;
   height: 2.5em;
-  background-color: $light-background-color-primary;
-  border: 2px solid $light-background-color-primary;
+  &.light {
+    background-color: $light-background-color-primary;
+    border: 2px solid $light-background-color-primary;
+  }
+  &.dark {
+    background-color: $dark-background-color-primary;
+    border: 2px solid $dark-background-color-primary;
+  }
   border-radius: 2em;
 }
 
 .button-light:hover {
-  background-color: $light-background-color-primary;
-  border: 2px solid $light-text-color;
+  &.light {
+    background-color: $light-background-color-primary;
+    border: 2px solid $light-text-color;
+  }
+  &.dark {
+    background-color: $dark-background-color-primary;
+    border: 2px solid $dark-text-color;
+  }
 }

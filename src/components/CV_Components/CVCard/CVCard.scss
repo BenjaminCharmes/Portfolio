@@ -5,11 +5,17 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
   height: auto;
-  box-shadow: $box-shadow;
+  &.light {
+    box-shadow: $box-shadow-light;
+    background-color: $light-background;
+  }
+  &.dark {
+    box-shadow: $box-shadow-dark;
+    background-color: $dark-background;
+  }
   border-radius: 0.5em;
   margin-bottom: 1em;
   padding: 1.5em;
-  background-color: #fff;
 
   .left {
     .date {

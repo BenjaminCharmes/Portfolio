@@ -1,17 +1,21 @@
 // React router
 import { Link } from "react-router-dom";
 
+// Jotai
+import { useAtomValue } from "jotai";
+import appStateStore from "../../store/appStateStore";
+
 // SCSS
 import "./CustomLink.scss";
 
-const CustomLink = (props) => {
-  const { link, text, newWindow } = props;
+const CustomLink = ({ link, text, newWindow }) => {
+  const appState = useAtomValue(appStateStore);
 
   if (newWindow) {
     return (
       <>
         <a
-          className='custom-link'
+          className={`custom-link ${appState.theme}`}
           href={link}
           target='_blank'
           rel='noopener noreferrer'
@@ -24,7 +28,7 @@ const CustomLink = (props) => {
 
   return (
     <>
-      <Link className='custom-link' to={link}>
+      <Link className={`custom-link ${appState.theme}`} to={link}>
         {text}
       </Link>
     </>

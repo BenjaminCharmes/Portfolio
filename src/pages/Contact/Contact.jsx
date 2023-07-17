@@ -1,6 +1,10 @@
 // React
 import React, { useState } from "react";
 
+// Jotai
+import { useAtomValue } from "jotai";
+import appStateStore from "../../store/appStateStore";
+
 // Components
 import ButtonLight from "../../components/Button/ButtonLight/ButtonLight";
 
@@ -8,6 +12,8 @@ import ButtonLight from "../../components/Button/ButtonLight/ButtonLight";
 import "./Contact.scss";
 
 const Contact = () => {
+  const appState = useAtomValue(appStateStore);
+
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
@@ -25,7 +31,7 @@ const Contact = () => {
 
   return (
     <div className='form-container'>
-      <form onSubmit={handleSubmit}>
+      <form className={`${appState.theme}`} onSubmit={handleSubmit}>
         <div>
           <label htmlFor='email'>Email :</label>
           <input

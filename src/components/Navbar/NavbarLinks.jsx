@@ -4,8 +4,6 @@ import { useLocation } from "react-router-dom";
 
 // Jotai
 import { useAtomValue } from "jotai";
-
-// Store
 import appStateAtom from "../../store/appStateStore";
 
 // Components
@@ -24,17 +22,29 @@ const NavbarLinks = () => {
   }, [location]);
 
   return (
-    <ul>
+    <ul className='navbar-all-link'>
       {appState.language === "english" ? (
         <>
-          <NavbarLink path='/' content='About me' activeLink={currentUrl} />
-          <NavbarLink path='/cv' content='CV' activeLink={currentUrl} />
           <NavbarLink
+            className='link'
+            path='/'
+            content='About me'
+            activeLink={currentUrl}
+          />
+          <NavbarLink
+            className='link'
+            path='/cv'
+            content='CV'
+            activeLink={currentUrl}
+          />
+          <NavbarLink
+            className='link'
             path='/projects'
             content='Projects'
             activeLink={currentUrl}
           />
           <NavbarLink
+            className='link'
             path='/contact'
             content='Contact'
             activeLink={currentUrl}
@@ -43,17 +53,25 @@ const NavbarLinks = () => {
       ) : (
         <>
           <NavbarLink
+            className='link'
             path='/'
             content='À propos de moi'
             activeLink={currentUrl}
           />
-          <NavbarLink path='/cv' content='CV' activeLink={currentUrl} />
           <NavbarLink
+            className='link'
+            path='/cv'
+            content='CV'
+            activeLink={currentUrl}
+          />
+          <NavbarLink
+            className='link'
             path='/projects'
             content='Projets'
             activeLink={currentUrl}
           />
           <NavbarLink
+            className='link'
             path='/contact'
             content='Contact'
             activeLink={currentUrl}
