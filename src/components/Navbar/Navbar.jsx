@@ -56,6 +56,8 @@ const Navbar = () => {
         <SwitchButton
           state={appState.language === "english" ? true : false}
           mode='language'
+          textOn={"En"}
+          textOff={"Fr"}
           handleSwitchButton={toggleLanguage}
         />
       </div>
