@@ -5,6 +5,10 @@ import { useEffect } from "react";
 // Jotai
 import appStateStore from "../../store/appStateStore";
 
+// Assets
+import Sun from "/src/assets/Images/sun.png";
+import Moon from "/src/assets/Images/moon.png";
+
 // Components
 import NavbarLinks from "./NavbarLinks";
 import NavbarTitle from "./NavbarTitle";
@@ -45,15 +49,13 @@ const Navbar = () => {
         <SwitchButton
           state={appState.theme === "light" ? true : false}
           mode='theme'
-          srcOn='src/assets/Images/sun.png'
-          srcOff='src/assets/Images/moon.png'
+          srcOn={Sun}
+          srcOff={Moon}
           handleSwitchButton={toggleTheme}
         />
         <SwitchButton
           state={appState.language === "english" ? true : false}
           mode='language'
-          textOn='En'
-          textOff='Fr'
           handleSwitchButton={toggleLanguage}
         />
       </div>
