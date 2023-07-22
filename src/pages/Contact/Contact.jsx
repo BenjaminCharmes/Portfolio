@@ -7,6 +7,7 @@ import appStateStore from "../../store/appStateStore";
 
 // Components
 import ButtonLight from "../../components/Button/ButtonLight/ButtonLight";
+import H1Title from "../../components/H1Title/H1Title";
 
 // SCSS
 import "./Contact.scss";
