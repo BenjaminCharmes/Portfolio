@@ -5,9 +5,11 @@ import React, { useState } from "react";
 import { useAtomValue } from "jotai";
 import appStateStore from "../../store/appStateStore";
 
+// Axios
+import axios from "axios";
+
 // Components
 import ButtonLight from "../../components/Button/ButtonLight/ButtonLight";
-import H1Title from "../../components/H1Title/H1Title";
 
 // SCSS
 import "./Contact.scss";
@@ -19,12 +21,30 @@ const Contact = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const formData = {
+    email: email,
+    subject: subject,
+    message: message,
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Envoyer les données du formulaire où vous le souhaitez (par exemple, en utilisant une requête HTTP)
+    const formData = {
+      email: email,
+      subject: subject,
+      message: message,
+    };
 
-    // Réinitialiser les champs du formulaire après l'envoi
+    axios
+      .post("https://bc-api-nine.vercel.app/send-email", formData)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
     setEmail("");
     setSubject("");
     setMessage("");
@@ -45,11 +65,11 @@ const Contact = () => {
           />
         </div>
         <div>
-          <label htmlFor='subject'>Objet :</label>
+          <label htmlFor='subject'>Subject :</label>
           <input
             type='text'
             id='subject'
-            placeholder='Enter your object'
+            placeholder='Enter your subject'
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
             required
@@ -65,7 +85,7 @@ const Contact = () => {
             required
           />
         </div>
-        <ButtonLight text={"Envoyer"} />
+        <ButtonLight text={"Envoyer"} onClick={handleSubmit} />
       </form>
     </div>
   );
