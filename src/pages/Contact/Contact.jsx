@@ -37,7 +37,7 @@ const Contact = () => {
     };
 
     axios
-      .post("https://bc-api-nine.vercel.app/send-email", formData)
+      .post("https://benjamin-charmes-api.onrender.com/send-email", formData)
       .then((response) => {
         console.log(response.data);
       })
