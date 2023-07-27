@@ -36,6 +36,8 @@ const Contact = () => {
       message: message,
     };
 
+    console.log(formData);
+
     axios
       .post("https://benjamin-charmes-api.onrender.com/send-email", formData)
       .then((response) => {
