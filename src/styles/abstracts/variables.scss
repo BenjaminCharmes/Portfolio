@@ -1,4 +1,6 @@
 //Colors
+
+// Light
 $light-text-color: #606c38;
 $light-text-color-light: #a5be00;
 $light-background-color-primary: beige;
@@ -6,12 +8,13 @@ $light-background-color-secondary: #afbc88;
 $light-background: #fff;
 $box-shadow-light: 0 0 8px rgba(0, 0, 0, 0.2);
 
+// Dark
 $dark-text-color: beige;
-$dark-text-color-light: #a5be00;
-$dark-background-color-primary: #606c38;
-$dark-background-color-secondary: #afbc88;
+$dark-text-color-light: #057b57;
+$dark-background-color-primary: #445444;
+$dark-background-color-secondary: #949c7c;
 $dark-background: #333;
-$box-shadow-dark: 0 0 8px rgba(255, 255, 255, 0.567);
+$box-shadow-dark: 0 0 4px rgba(225, 222, 222, 0.567);
 
 // Font
 
