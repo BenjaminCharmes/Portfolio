@@ -1,3 +1,7 @@
+// Jotai
+import { useAtomValue } from "jotai";
+import appStateStore from "../../store/appStateStore";
+
 // Components
 import CVTitle from "../../components/CV_Components/CVTitle/CVTitle";
 import CVCard from "../../components/CV_Components/CVCard/CVCard";
@@ -20,12 +24,14 @@ import VUE_JS from "../../assets/Skills_SVG/VUE_JS.svg";
 import "./CV.scss";
 
 const CV = () => {
+  const appState = useAtomValue(appStateStore);
+
   const handleDownload = () => {
     const downloadUrl = "src/assets/pdf/CV_Benjamin_CHARMES_english.pdf";
     window.open(downloadUrl);
   };
 
-  return (
+  return appState.language === "english" ? (
     <div className='cv-container'>
       <div className='content-container'>
         <div className='title-container'>
@@ -98,7 +104,7 @@ const CV = () => {
           <CVTitle text='Formation' />
           <CVCard
             date='2022 - 2023'
-            title='Developer training'
+            title='Developer bootcamp training'
             company='The Hacking Project'
             location='France'
             description={`⏺ -  24 intensive weeks in peer learing
@@ -110,7 +116,7 @@ const CV = () => {
           />
           <CVCard
             date='2022 - 2022'
-            title='Cyber-security training'
+            title='Cyber-security bootcamp training'
             company='The Hacking Project'
             location='France'
             description={`⏺ -  Introduction training: 3 intense weeks of peer-learning
@@ -146,6 +152,131 @@ const CV = () => {
             company='University Institute of Technology'
             location='Saint-Jérôme, Marseille, France'
             description='University Diploma of Technology in Chemistry, analysis and synthesis option'
+          />
+        </div>
+      </div>
+    </div>
+  ) : (
+    <div className='cv-container'>
+      <div className='content-container'>
+        <div className='title-container'>
+          <H1Title title={"CV"} />
+          <ButtonDark onClick={handleDownload} text={"Télécharger"} />
+        </div>
+        <div className='skills'>
+          <CVTitle text='Mes compétences' />
+          <SkillsCard />
+        </div>
+        <div className='experiences'>
+          <CVTitle text='Mes expériences' />
+          <CVCard
+            date='2023'
+            title='Stage'
+            company='Loxpert'
+            location='France'
+            description="Participation à l'optimisation mobile de la plateforme Loxpert et au développement de son application mobile."
+            link='https://www.loxpert.fr'
+            linkText='Visiter Loxpert'
+            skills={true}
+            skillsList={[
+              NODE_JS,
+              NUXT_JS,
+              VUE_JS,
+              POSTMAN,
+              GITLAB,
+              XCODE,
+              FIGMA,
+              NOTION,
+              TRELLO,
+            ]}
+          />
+          <CVCard
+            date='2019 - 2022'
+            title='Enseignant contractuel de Physique/Chimie'
+            company="Ministère de l'éducation nationale"
+            location='France'
+            description='Prise en charge de plusieurs classes pour les élèves de collège et lycée :
+
+          - 2022, Martigues : 8 classes.
+          - 2021, Salon-de-Provence : 4 classes.
+          - 2020 - 2021 Sault : 4 classes.
+          - 2020 - 2021 Carpentras : 8 classes.
+          - 2019 Aix-en-Provence : 11 classes.'
+          />
+          <CVCard
+            date='2018'
+            title='Stage'
+            company='Robertet'
+            location='Grasse, France'
+            description="Développement d'une méthode de dosage du Farnesol dans des huiles essentielles de bois de santal par GC-MS - 6 mois"
+          />
+          <CVCard
+            date='2017'
+            title='Stage'
+            company='IMBE'
+            location='Marseille, France'
+            description="Étude du vieillissement d'huile d'olive coupée par des huiles végétales avec suivi FTIR - 2 mois"
+          />
+          <CVCard
+            date='2015'
+            title='Stage'
+            company='CEA, Cadarache'
+            location='Saint-Paul-lès-Durance, France'
+            description='Mise à jour des évaluations des risques chimiques pour une installation nucléaire - 2 mois'
+          />
+        </div>
+        <div className='formation'>
+          <CVTitle text='Mes formations' />
+          <CVCard
+            date='2022 - 2023'
+            title='Formation bootcamp de développeurs'
+            company='The Hacking Project'
+            location='France'
+            description={`⏺ - 24 semaines intensives en peer-learning
+
+    12 semaines sur Ruby on Rails
+    12 semaines sur React.JS
+    
+    ⏺ - 8 semaines d'expérience professionnelle`}
+          />
+          <CVCard
+            date='2022 - 2022'
+            title='Formation bootcamp à la cybersécurité'
+            company='The Hacking Project'
+            location='France'
+            description={`⏺ - Formation d'introduction : 3 semaines intenses en peer-learning
+
+    Activités : Apprendre à créer un site web simple
+    Automatiser des tâches récurrentes
+    Comprendre les enjeux du code
+    
+    ⏺ - Formation à la cybersécurité : 1 semaine pour se protéger.
+    
+    Découvrir les outils utilisés par les pirates informatiques.
+    Jouer avec eux pour exploiter les vulnérabilités
+    Se protéger contre les attaques`}
+          />
+
+          <CVCard
+            date='2016 - 2018'
+            title='Master chimie'
+            company='Faculté des Sciences'
+            location='Saint-Jérôme, Marseille, France'
+            description='Master 2 Professionnel Chimie PACS (Perfectionnement en Analyse Chimique et Spectroscopique)'
+          />
+          <CVCard
+            date='2015 - 2016'
+            title='Licence Chimie'
+            company='Faculté des Sciences'
+            location='Saint-Jérôme, Marseille, France'
+            description='3ème année de licence de chimie'
+          />
+          <CVCard
+            date='2013 - 2015'
+            title='Diplôme Universitaire de Technologie en chimie'
+            company='Institut Universitaire de Technologie - Département Chimie'
+            location='Saint-Jérôme, Marseille, France'
+            description='Diplôme Universitaire de Technologie en Chimie, option analyse et synthèse'
           />
         </div>
       </div>
