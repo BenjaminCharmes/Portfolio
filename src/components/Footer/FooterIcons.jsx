@@ -15,6 +15,7 @@ const FooterIcons = () => {
           to='https://www.linkedin.com/in/benjamin-charmes/'
           target='_blank'
           rel='noopener noreferrer'
+          aria-label='LinkedIn profile of Benjamin Charmes'
         >
           <RiLinkedinLine className='icon' />
         </Link>
@@ -24,6 +25,7 @@ const FooterIcons = () => {
           to='https://github.com/BenjaminCharmes'
           target='_blank'
           rel='noopener noreferrer'
+          aria-label='Github profile of Benjamin Charmes'
         >
           <RiGithubLine className='icon' />
         </Link>
@@ -33,6 +35,7 @@ const FooterIcons = () => {
           to='https://twitter.com/BenjaminCharmes'
           target='_blank'
           rel='noopener noreferrer'
+          aria-label='Twitter profile of Benjamin Charmes'
         >
           <RiTwitterLine className='icon' />
         </Link>

@@ -26,13 +26,13 @@ const SwitchButton = ({
       onClick={handleSwitch}
     >
       {srcOn ? (
-        <img className='icon' src={srcOn} />
+        <img className='icon' src={srcOn} alt={"light mode"} />
       ) : (
         <p className='text'>{textOn}</p>
       )}
       <div className='knob'></div>
       {srcOff ? (
-        <img className='icon' src={srcOff} />
+        <img className='icon' src={srcOff} alt={"dark mode"} />
       ) : (
         <p className='text'>{textOff}</p>
       )}
